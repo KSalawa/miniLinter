@@ -42,7 +42,7 @@ let overusedWordsCount = betterWords.forEach(word => {
 function overusedWordsTotal(){
     console.log(`You've used REALLY ${useOfReally} times.`)
     console.log(`Word VERY has been used ${useOfVery}`)
-    console.log(`BASICALLY has been used ${useOfBasically}`)
+    console.log(`BASICALLY has been used ${useOfBasically} time.`)
 };
 
 overusedWordsTotal();
@@ -65,3 +65,5 @@ betterWords.forEach(word => {
 })
 
  console.log(`There are ${sentences} in the paragraph.`);
+
+ console.log(betterWords.join(' '));
