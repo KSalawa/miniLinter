@@ -24,20 +24,26 @@ console.log(betterWords.length);
 
 
 //step 4 below
-let useOfWords = betterWords.filter(word => overusedWords.includes(word));
-let useOfExtremely = 0;
-let useOfLiterally = 0;
-let useOfActually = 0;
+let useOfReally = 0;
+let useOfVery = 0;
+let useOfBasically = 0;
 
-let overusedWordsIndex = betterWords.filter(word => overusedWords.includes(word));
+//iterate through betterWords to see how many time overusedWord occured
+let overusedWordsCount = betterWords.forEach(word => {
+    if(word === 'really') {
+        useOfReally += 1;
+    } else if (word === 'very') {
+        useOfVery += 1;
+    } else if (word === 'basically') {
+        useOfBasically += 1;
+    }
+})
+  
+function overusedWordsTotal(){
+    console.log(`You've used REALLY ${useOfReally} times.`)
+    console.log(`Word VERY has been used ${useOfVery}`)
+    console.log(`BASICALLY has been used ${useOfBasically}`)
+};
 
-/*
-function overUsedWordsCounter() {
-    console.log(`You've used 'extremely' ${useOfExtremely} times.`)
-    console.log(`You've used 'literally' ${useOfLiterally} times.`)
-    console.log(`You've used 'actually' ${useOfActually} times.`)
-}
+overusedWordsTotal();
 
-useOfWords();
-overUsedWordsCounter();
-*/
