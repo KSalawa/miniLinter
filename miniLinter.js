@@ -37,7 +37,7 @@ let overusedWordsCount = betterWords.forEach(word => {
     } else if (word === 'basically') {
         useOfBasically += 1;
     }
-})
+});
   
 function overusedWordsTotal(){
     console.log(`You've used REALLY ${useOfReally} times.`)
@@ -47,3 +47,21 @@ function overusedWordsTotal(){
 
 overusedWordsTotal();
 
+/* step 5:
+Now, count how many sentences are in the paragraph.
+This may seem tricky, but remember that all of the 
+sentences in this paragraph end with a period (.) 
+or an exclamation mark (!). You could iterate over 
+the array and add 1 to a sentence counter variable 
+for each word that has a period or exclamation mark
+ as its final character. */
+
+ let sentences = 0;
+ 
+betterWords.forEach(word => {
+    if (word[word.length-1]=== '.' || word[word.length-1]=== '!'){
+        sentences += 1;
+    }
+})
+
+ console.log(`There are ${sentences} in the paragraph.`);
